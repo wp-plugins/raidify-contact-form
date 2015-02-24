@@ -23,7 +23,7 @@ Bonus: Unlike most Contact form plugins for WordPress, this one comes with all o
 
 Requires WordPress 3.9
 
-**Current add-ons**
+ Current add-ons:
 
 * Use your WordPress's site admin email to receive mails or use a customized email account
 * Set the required fields easily from the plugin settings page
@@ -40,7 +40,7 @@ Requires WordPress 3.9
 * Specify a SMTP Password
 
 
-**Coming soon**
+Coming soon:
 
 * CAPTCHA support
 * Got more ideas? Tell me!)
