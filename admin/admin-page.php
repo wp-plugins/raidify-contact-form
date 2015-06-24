@@ -216,9 +216,21 @@ class admin_page {
      * 
     */
     function rcf_get_users(){
-        $users = get_users( array( 'fields' => array( 'display_name', 'user_email' ) ));
+        $users = get_users( 
+                array( 
+                    'fields' => array( 
+                        'display_name', 
+                        'user_email' 
+                        ) 
+                    )
+                );
+        
         foreach ($users as $user) {
-            return sprintf('<option value=%s>%s</option>',esc_html( $user->user_email ) ,esc_html( $user->display_name ));
+            return sprintf(
+                    '<option value=%s>%s</option>',
+                    esc_html( $user->user_email ) ,
+                    esc_html( $user->display_name )
+                    );
         }
     }
 
@@ -268,7 +280,8 @@ class admin_page {
      * 
     */
     function rcf_generate_input_element_table_body(){
-        foreach (self::$rcf_options['input-elements'] as $item) {
+        $input_elements = self::$rcf_options['input-elements'];
+        foreach ($input_elements as $item) {
             $checked = "";
             if (in_array($item, self::$rcf_options['required'])) {
                 $checked = "checked";
@@ -289,7 +302,8 @@ class admin_page {
      * 
     */
     function rcf_generate_textarea_element_table_body(){
-        foreach (self::$rcf_options['text-area-elements'] as $item) {
+        $text_area_elements = self::$rcf_options['text-area-elements'];
+        foreach ($text_area_elements as $item) {
             $checked = "";
             if (in_array($item, self::$rcf_options['required'])) {
                 $checked = "checked";
@@ -460,7 +474,8 @@ class admin_page {
      * 
     */
     function rcf_check_smtp_options(){
-        foreach (self::$rcf_new_smtp_settings as $key => $value) {
+        $new_smtp_settings = self::$rcf_new_smtp_settings;
+        foreach ($new_smtp_settings as $key => $value) {
             if (empty($value) && $key != 'from-name') {
                 self::$empty_smtp_options[] = $key;
             }
@@ -478,7 +493,8 @@ class admin_page {
     */
     function rcf_display_smtp_settings_error(){
         self::$smtp_error_message = '<p class="rcf-warning">'.__('To use SMTP fill the following SMTP options', 'raidify-contact-form').'</p>';
-        foreach (self::$empty_smtp_options as $item) { 
+        $empty_smtp_options = self::$empty_smtp_options;
+        foreach ($empty_smtp_options as $item) { 
             if($item == 'host-server'){
                 self::$smtp_error_message .='<p class="rcf-warning rcf-warning-content">'.__('SMTP Host Server', 'raidify-contact-form').'</p>';
             }elseif ($item == 'port-number') {

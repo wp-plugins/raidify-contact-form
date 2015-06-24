@@ -15,7 +15,22 @@ if (!class_exists('RaidifyContactFormDisplay')) {
         var $default_input_type = 'text';
         var $rcf_input_elements = array();
         var $rcf_text_area_element = array();
-        var $rcf_input_type = array('color', 'date', 'datetime', 'datetime-local', 'email', 'month', 'number', 'range', 'search', 'tel', 'time', 'url', 'week');
+        var $rcf_input_type = array(
+            'color', 
+            'date',
+            'datetime',
+            'datetime-local',
+            'email',
+            'month',
+            'number',
+            'range',
+            'search',
+            'tel',
+            'time', 
+            'url',
+            'week'
+            );
+        
         var $placeholder = array();
         
         /**
@@ -65,7 +80,8 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          * @return String the placeholder
         */        
         private function rcf_get_placeholder($element){
-            foreach ($this->placeholder as $key => $value) {
+            $placeholders = $this->placeholder;
+            foreach ($placeholders as $key => $value) {
                 if($key == $element){
                     return $value;
                 }
@@ -80,12 +96,28 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          */
         public function rcf_display_form() { 
             echo '<div id="rcf-contact-form-display">';
-            $request_uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
-            echo '<form id="feedback" method="post" action="' . esc_url($request_uri) .'#rcf-contact-form-display'. '">';
+            $request_uri = filter_input(
+                    INPUT_SERVER, 
+                    'REQUEST_URI', 
+                    FILTER_SANITIZE_STRING
+                    );
+            
+            echo '<form id="feedback" method="post" action="'
+                    . esc_url($request_uri) 
+                    .'#rcf-contact-form-display'
+                    .'">'
+                    ;
+            
             $this->rcf_generate_form_input_elements();
             $this->rcf_generate_form_text_area_elements(60, 8);
             $this->set_send("rcf_submit");
-            echo '<p><input type="submit" id="rcf-submit" name="' . $this->get_send() . '" class="rcf-form" value=' .__('send', 'raidify-contact-form'). '></p>';
+            echo '<p><input type="submit" id="rcf-submit" name="' 
+                    . $this->get_send() 
+                    . '" class="rcf-form" value=' 
+                    .__('send', 'raidify-contact-form')
+                    . '></p>'
+                    ;
+            
             echo '</form>';
             echo '</div>';
         }
@@ -106,10 +138,22 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          * 
         */
         private function rcf_generate_form_input_elements() {
-            foreach ($this->rcf_input_elements as $item) {
+            $input_elements = $this->rcf_input_elements;
+            foreach ($input_elements as $item) {
                 $this->rcf_generate_element_type($item);
-                echo '<p><label for="' . $item . '">' . ucfirst(__($item, 'raidify-contact-form')) .ProcessMail::rcf_set_required_label($item). ' : ' . ProcessMail::rcf_set_form_element_error($item) . '</label><br>'
-                . '<input type="' . $this->default_input_type . '" id="' .'rcf-'. $item . '" name="' .'rcf-'.$item . '" class="rcf-form" placeholder="'.$this->rcf_get_placeholder($item).'" value="' . ProcessMail::rcf_preserve_input_value('rcf-'.$item) . '"></p>';
+                echo '<p><label for="' . $item . '">' 
+                        . ucfirst(__($item, 'raidify-contact-form')) 
+                        .ProcessMail::rcf_set_required_label($item)
+                        . ' : ' 
+                        . ProcessMail::rcf_set_form_element_error($item)
+                        . '</label><br>'
+                        
+                . '<input type="' . $this->default_input_type . '" id="' .'rcf-'
+                        . $item . '" name="' 
+                        .'rcf-'.$item . '" class="rcf-form" placeholder="'
+                        .$this->rcf_get_placeholder($item)
+                        .'" value="' . ProcessMail::rcf_preserve_input_value('rcf-'.$item)
+                        . '"></p>';
             }
         }
 
@@ -120,9 +164,19 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          * @param int $row row size
         */
         private function rcf_generate_form_text_area_elements($col, $row) {
-            foreach ($this->rcf_text_area_element as $item) {
-                echo '<p><label for="' . $item . '">' . ucfirst($item) .ProcessMail::rcf_set_required_label($item). ' : ' . ProcessMail::rcf_set_form_element_error($item) . '</label><br>'
-                . '<textarea id="' .'rcf-'. $item . '" name="' .'rcf-'. $item . '" class="rcf-form" col="' . $col . '" rows="' . $row . '" placeholder="'.$this->rcf_get_placeholder($item).'">' . ProcessMail::rcf_preserve_input_value('rcf-'.$item) . '</textarea></p>';
+            $text_area_element = $this->rcf_text_area_element;
+            foreach ($text_area_element as $item) {
+                echo '<p><label for="' . $item . '">' . ucfirst($item)
+                        .ProcessMail::rcf_set_required_label($item)
+                        . ' : ' . ProcessMail::rcf_set_form_element_error($item)
+                        . '</label><br>'
+                        
+                . '<textarea id="' .'rcf-'. $item . '" name="' .'rcf-'. $item 
+                        . '" class="rcf-form" col="' . $col . '" rows="' . $row 
+                        . '" placeholder="'.$this->rcf_get_placeholder($item)
+                        .'">' . ProcessMail::rcf_preserve_input_value('rcf-'.$item)
+                        . '</textarea></p>'
+                    ;
             }
         }
 
@@ -133,7 +187,8 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          * @param string $value html input type attribute values
         */
         private function rcf_generate_element_type($value) {
-            foreach ($this->rcf_input_type as $type) {
+            $input_type = $this->rcf_input_type;
+            foreach ($input_type as $type) {
                 if ($type == $value) {
                     $this->default_input_type = $type;
                 }
@@ -193,7 +248,11 @@ if (!class_exists('RaidifyContactFormDisplay')) {
 
                 $phpmailer->From = RCF_SMTP_FROM;
                 if(RCF_SMTP_FROMNAME == ''){
-                    add_filter( 'wp_mail_from_name', array($this,'rcf_my_mail_from_name'));
+                    add_filter(
+                            'wp_mail_from_name',
+                            array($this,'rcf_my_mail_from_name')
+                            );
+                    
                 }else{
                     $phpmailer->FromName = RCF_SMTP_FROMNAME;
                 }              

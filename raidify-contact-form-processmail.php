@@ -135,9 +135,15 @@ class ProcessMail{
        
        if(!self::$missing_fields && !self::$errors_fields){
            self::$headers .= 'Content-Type: text/plain; charset=utf-8'. "\r\n";
-           self::$mail_subject = filter_input(INPUT_POST, 'rcf-subject', FILTER_SANITIZE_STRING);
+           self::$mail_subject = filter_input(
+                   INPUT_POST, 
+                   'rcf-subject', 
+                   FILTER_SANITIZE_STRING
+                   );
+           
            self::$message = '';
-           foreach (self::$expected_fields as $item) {
+           $expected_fields = self::$expected_fields;
+           foreach ($expected_fields as $item) {
                $temp = filter_input(INPUT_POST, $item);
                if(isset($temp) && !empty($temp)){
                    $val = $temp;  
@@ -149,8 +155,15 @@ class ProcessMail{
                }
                self::$message .= "$val\r\n\r\n";
            }           
-           self::$message = wordwrap(self::$message, self::$message_wrap);
-           self::$mail_sent = wp_mail(self::$mail_to, self::$mail_subject, self::$message, self::$headers);
+           self::$message = wordwrap(
+                   self::$message, 
+                   self::$message_wrap
+                   );
+           
+           self::$mail_sent = wp_mail(
+                   self::$mail_to, self::$mail_subject, 
+                   self::$message, self::$headers
+                   );
        }
    } 
    

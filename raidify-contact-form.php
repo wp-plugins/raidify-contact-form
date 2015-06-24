@@ -5,7 +5,7 @@
  * Plugin URI: http://raidify.com/raidify-contact-form/
  * Description: Raidify contact form is a free customizable contact form with SMTP (Simple Mail Transfer Protocol) support.
  * Author: Olaleye Osunsanya
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author URI: http://raidify.com/
  * Text Domain: raidify-contact-form
  * Domain Path: /languages/
@@ -38,10 +38,23 @@ if(!class_exists('Raidify_Contact_Form')){
             add_option(MYPLUGIN_VERSION_KEY, MYPLUGIN_VERSION_NUM);
             
             //register shortcode
-            add_shortcode( 'rcf_contact_form', array( $this, 'rcf_shortCode' ) );
+            add_shortcode( 
+                    'rcf_contact_form', 
+                    array( 
+                        $this, 
+                        'rcf_shortCode' 
+                        ) 
+                    );
             
             //add settings link to plugin on plugin page            
-            add_filter("plugin_action_links_$plugin_basename", array($this, 'plugin_settings_link'));
+            add_filter(
+                    "plugin_action_links_$plugin_basename", 
+                    array(
+                        $this, 
+                        'plugin_settings_link'
+                        )
+                    );
+            
             //load the text domain for internationalization
             add_action('plugins_loaded', array($this, 'rcf_load_textdomain'));
             
@@ -101,7 +114,11 @@ if(!class_exists('Raidify_Contact_Form')){
          * This function loads the language files form their folder.
          */ 
 	function rcf_load_textdomain(){
-        load_plugin_textdomain('raidify-contact-form', false, dirname(plugin_basename(__FILE__)).'/languages');        
+        load_plugin_textdomain(
+                'raidify-contact-form', 
+                false, 
+                dirname(plugin_basename(__FILE__)).'/languages'
+                );        
     }
 	
     }    

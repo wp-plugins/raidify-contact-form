@@ -41,7 +41,16 @@ if(!class_exists('Raidify_contact_form_settings')){
             $menu_slug = 'rcf_settings_page';
             $function = 'rcf_settings_page';
 
-            add_menu_page($page_title, $menu_title, $capability, $menu_slug, array(&$this,$function));
+            add_menu_page(
+                    $page_title, 
+                    $menu_title, 
+                    $capability, 
+                    $menu_slug, 
+                    array(
+                        &$this,
+                        $function
+                    )
+                    );
         }
         
         /**
@@ -61,7 +70,13 @@ if(!class_exists('Raidify_contact_form_settings')){
          * function that registers and enqueue style
          */
         function rcf_style() {
-                wp_register_style('custom_wp_admin_css', MYPLUGIN_PLUGIN_URL . '/css/admin-style.css', false, '1.0.0');
+                wp_register_style(
+                        'custom_wp_admin_css', 
+                        MYPLUGIN_PLUGIN_URL . '/css/admin-style.css',
+                        false,
+                        '1.0.0'
+                        );
+                
                 wp_enqueue_style('custom_wp_admin_css');
         }
 
