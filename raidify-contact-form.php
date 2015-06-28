@@ -5,7 +5,7 @@
  * Plugin URI: http://raidify.com/raidify-contact-form/
  * Description: Raidify contact form is a free customizable contact form with SMTP (Simple Mail Transfer Protocol) support.
  * Author: Olaleye Osunsanya
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author URI: http://raidify.com/
  * Text Domain: raidify-contact-form
  * Domain Path: /languages/
@@ -57,6 +57,8 @@ if(!class_exists('Raidify_Contact_Form')){
             
             //load the text domain for internationalization
             add_action('plugins_loaded', array($this, 'rcf_load_textdomain'));
+            
+            $this->rcf_init_settings();
             
         }
         
@@ -119,6 +121,51 @@ if(!class_exists('Raidify_Contact_Form')){
                 false, 
                 dirname(plugin_basename(__FILE__)).'/languages'
                 );        
+    }
+    
+    /**
+     * Initializes the admin page options and adds it to the 
+     * options table in wordpress database
+     * 
+    */     
+    function rcf_init_settings() {
+        $rcf_options = array(
+            'input-elements' => array(
+                __('name', 'raidify-contact-form'), 
+                __('subject', 'raidify-contact-form'), 
+                __('email', 'raidify-contact-form')),
+            'text-area-elements' => array(
+                __('message', 'raidify-contact-form')),
+            'required' => array(
+                __('name', 'raidify-contact-form'), 
+                __('subject', 'raidify-contact-form'), 
+                __('email', 'raidify-contact-form'), 
+                __('message', 'raidify-contact-form')),
+            'required-label' => '(required)',
+            'placeholder' => array(
+                __('name', 'raidify-contact-form') => '',
+                __('subject', 'raidify-contact-form') => '',
+                __('email', 'raidify-contact-form') => '',
+                __('message', 'raidify-contact-form') => ''
+            ),
+            'sendto' => array(
+                'user' => 'rcf-wpuser',
+                'user-email' => ''
+            ),
+            'mailer' => 'phpmail',
+            'smtp-option' => array(
+                'authentication' => '',
+                'host-server' => '',
+                'port-number' => '',
+                'encryption' => 'noencryption', 
+                'from' => '',
+                'from-name' => '',
+                'username' => '',
+                'password' => ''
+            )
+        );
+
+        add_option('rcf_admin_settings', $rcf_options);
     }
 	
     }    
