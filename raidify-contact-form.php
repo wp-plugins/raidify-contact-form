@@ -5,7 +5,7 @@
  * Plugin URI: http://raidify.com/raidify-contact-form/
  * Description: Raidify contact form is a free customizable contact form with SMTP (Simple Mail Transfer Protocol) support.
  * Author: Olaleye Osunsanya
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author URI: http://raidify.com/
  * Text Domain: raidify-contact-form
  * Domain Path: /languages/
