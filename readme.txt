@@ -6,7 +6,7 @@ Author URL: http://raidify.com/
 Plugin URL: http://raidify.com/raidify-contact-form/
 Tags: raidify, contact,contact form, contact form plugin, contact me, contact us, contacts, contacts form plugin, raidify contact form, feedback, feedback form, form, request, request form, customizable contact form, contact form with smtp
 Requires at least: 3.9
-Tested up to: 4.1.1
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,7 +21,7 @@ First you activate the plugin and put the shortcode [rcf_contact_form] in the re
 
 Bonus: Unlike most Contact form plugins for WordPress, this one comes with all of it's features completely free.
 
-Requires WordPress 3.9
+Requires at least WordPress 3.9
 
 **Current add-ons**
 
@@ -141,3 +141,12 @@ Send me a message please http://raidify.com/contact-me/
 = 1.0.0 =
 
 * Initial release.
+
+= 1.0.3 =
+
+* Fixed bugs that prevents the contact form from loading on a page.
+
+= 1.1.3 =
+
+* Code restructure.
+* Tested with Wordpress 4.2.2
