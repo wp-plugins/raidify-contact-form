@@ -166,7 +166,7 @@ if (!class_exists('RaidifyContactFormDisplay')) {
             $text_area_element = $this->rcf_text_area_element;
             if (is_array($text_area_element)) {
                 foreach ($text_area_element as $item) {
-                    echo '<p><label for="' . $item . '">' . ucfirst($item)
+                    echo '<p><label for="' . $item . '">' . ucfirst(__($item, 'raidify-contact-form'))
                     . ProcessMail::rcf_set_required_label($item)
                     . ' : ' . ProcessMail::rcf_set_form_element_error($item)
                     . '</label><br>'

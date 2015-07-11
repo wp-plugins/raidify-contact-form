@@ -54,6 +54,7 @@ https://twitter.com/raidify_dev
 = Translators =
 
 * French (fr_FR) - [Olaleye](http://raidify.com/)
+* Spanish (es_ES) - [Jorge Azambuya](http://jorgeazambuya.com.ar/)
 
 If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [me](http://raidify.com/about/) so that I can bundle it into Raidify Contact Form.
 
@@ -150,3 +151,7 @@ Send me a message please http://raidify.com/contact-me/
 
 * Code restructure.
 * Tested with Wordpress 4.2.2
+
+= 1.1.4 =
+* Fixed translation problem of the message field.
+* Spanish translation was added. Thanks to [Jorge Azambuya](http://jorgeazambuya.com.ar/).
