@@ -2,266 +2,252 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Raidify-contact-form\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-25 13:52+0100\n"
+"POT-Creation-Date: 2015-08-25 13:46+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Pat <no@no.com>\n"
 "Language-Team: Olaleye Osunsanya <leye_2004@yahoo.com>\n"
-"Language: fr_FR\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_c;__ngettext_noop:1,2\n"
-"X-Poedit-Basepath: ../\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: admin/email.php:105
 msgid "Use this email address to receive mails"
-msgstr "Utilisez cette adresse email pour recevoir les mails"
+msgstr "使用此電子郵件地址來接收郵件"
 
 #: admin/email.php:125
 msgid "Admin Email Account"
-msgstr "Compte E-mail de l'admin"
+msgstr "管理員的電子郵件帳戶"
 
 #: admin/email.php:135
 msgid "Custom Email Account"
-msgstr "Email personnalisé compte"
+msgstr "自定義的電子郵件帳戶"
 
 #: admin/email.php:142
 msgid ""
 "Select the radio button and enter the email address that emails should be "
 "sent to, if left blank the admin email will be used"
 msgstr ""
-"Sélectionnez la case d'option et entrez l'adresse e-mail que les e-mails "
-"sont à adresser à, si laissé vide l'e-mail de l'admin se qu'il avait "
-"l'habitude"
+"選擇單選按鈕，然後輸入郵件要發送到，如果留空管理員電子郵件將被使用的電子郵件"
+"地址"
 
 #: admin/email.php:160 admin/field.php:204 admin/reCaptcha.php:99
 #: admin/smtp.php:67
 msgid ""
 "Paste this Short code [rcf_contact_form] on the page or post you want this "
 "form to appear"
-msgstr ""
-"Collez ce code court \"[rcf_contact_form]\" sur la page ou un message que "
-"vous voulez cette forme de comparaître"
+msgstr "在頁面上粘貼此短代碼[rcf_contact_form]或張貼你想這種形式出現"
 
 #: admin/email.php:165 admin/field.php:209 admin/reCaptcha.php:104
 #: admin/smtp.php:73
 msgid "Save Changes"
-msgstr "Enregistrer les modifications"
+msgstr "保存更改"
 
 #: admin/field.php:121 admin/field.php:161
 msgid "Required"
-msgstr "Requis"
+msgstr "需要"
 
 #: admin/field.php:126 admin/field.php:166
 msgid "Placeholder"
-msgstr "Placeholder"
+msgstr "佔位符"
 
 #: admin/field.php:184
 msgid "Fields settings"
-msgstr "Paramètres de champ"
+msgstr "字段設置"
 
 #: admin/field.php:230
 msgid ""
 "Use \"Required Label\" to set the text that appears on the required fields "
 "on the contact form"
-msgstr ""
-"\"Label requis\" permet de définir le texte qui apparaît sur les champs "
-"requis sur le formulaire de contact"
+msgstr "請使用“必需標籤”來設置上的聯繫表格上所需的字段顯示的文本"
 
 #: admin/field.php:234
 msgid "Required Label"
-msgstr "étiquette requise"
+msgstr "所需標籤"
 
 #: admin/reCaptcha.php:70
 msgid "Use Google Recaptcha"
-msgstr "Utilisez Google Recaptcha"
+msgstr "使用谷歌驗證碼"
 
 #: admin/reCaptcha.php:73
 msgid "Site Key"
-msgstr "clé du site"
+msgstr "網站的關鍵"
 
 #: admin/reCaptcha.php:78
 msgid "Secret Key"
-msgstr "clé secrète"
+msgstr "密鑰"
 
 #: admin/smtp.php:159
 msgid "Use SMTP"
-msgstr "Utiliser SMTP"
+msgstr "使用SMTP"
 
 #: admin/smtp.php:165
 msgid "Use Php mail"
-msgstr "Utilisez Php électronique"
+msgstr "使用PHP郵件"
 
 #: admin/smtp.php:183 admin/smtp.php:284
 msgid "SMTP Host Server"
-msgstr "Hôte SMTP Server"
+msgstr "SMTP主機服務器"
 
 #: admin/smtp.php:188 admin/smtp.php:286
 msgid "SMTP Port Number"
-msgstr "Numéro de Port SMTP"
+msgstr "SMTP端口號"
 
 #: admin/smtp.php:193
 msgid "Use Encryption"
-msgstr "Utilisez le cryptage"
+msgstr "使用加密"
 
 #: admin/smtp.php:195
 msgid "No Encryption"
-msgstr "Aucun chiffrement"
+msgstr "沒有加密"
 
 #: admin/smtp.php:196
 msgid "Use SSL"
-msgstr "Utiliser SSL"
+msgstr "使用SSL"
 
 #: admin/smtp.php:197
 msgid "Use TLS"
-msgstr "Utilisation TLS"
+msgstr "使用TLS"
 
 #: admin/smtp.php:205
 msgid "Use SMTP Authentication"
-msgstr "Utiliser l'authentification SMTP"
+msgstr "使用SMTP驗證"
 
 #: admin/smtp.php:210 admin/smtp.php:288
 msgid "From"
-msgstr "De"
+msgstr "從"
 
 #: admin/smtp.php:215
 msgid "From Name (Optional)"
-msgstr "Nom (facultatif)"
+msgstr "從名稱（可選）"
 
 #: admin/smtp.php:220 admin/smtp.php:290
 msgid "Username"
-msgstr "Nom d'utilisateur:"
+msgstr "用戶名"
 
 #: admin/smtp.php:225 admin/smtp.php:292
 msgid "Password"
-msgstr "mot de passe:"
+msgstr "密碼"
 
 #: admin/smtp.php:245
 msgid " To use SMTP, fill the fields marked with \"*\" "
-msgstr "Pour utiliser SMTP, remplir les champs marqués avec \"*\""
+msgstr "使用SMTP，填寫標有 域“*”"
 
 #: admin/smtp.php:246
 msgid " For the encryption system, \"TLS\" is not the same as \"STARTTLS\" "
-msgstr ""
-"Pour le système de cryptage, \"TLS\" n'est pas la même chose que \"STARTTLS"
-"\" "
+msgstr "為加密系統“，TLS”是不一樣的“STARTTLS”"
 
 #: admin/smtp.php:247
 msgid ""
 " If \"Use SMTP Authentication\" is unchecked, \"Username\" and \"Password\" "
 "will not be used "
-msgstr ""
-"Si \"Utiliser l'authentification SMTP\" n'est pas cochée, \"nom d'utilisateur"
-"\" et \"mot de passe\" servira pas"
+msgstr "如果“使用SMTP驗證”被選中，“用戶名”和“密碼”將不能使用"
 
 #: admin/smtp.php:248
 msgid ""
 " If \"From Name\" is left blank, the name the user puts on the contact form "
 "name field will be used"
-msgstr ""
-"Si \"Du nom\" est vide, le nom de que l'utilisateur met sur le champ de nom "
-"de formulaire sera utilisé"
+msgstr "如果 “從名稱”留空，用戶戴上聯繫表格名稱字段名稱將使用"
 
 #: admin/smtp.php:280
 msgid "To use SMTP fill the following SMTP options"
-msgstr "Utilisation des options de remplissage suivant le protocole SMTP SMTP"
+msgstr "使用SMTP填寫以下SMTP選項"
 
 #: raidify-contact-form-display.php:123
 msgid "send"
-msgstr "envoyer"
+msgstr "發送"
 
 #: raidify-contact-form-processmail.php:79
 msgid "Please enter your"
-msgstr "Merci de saisir votre Nom"
+msgstr "請輸入您的"
 
 #: raidify-contact-form-processmail.php:82
 msgid "Invalid email address"
-msgstr "Adresse e-mail invalide."
+msgstr "無效的郵件地址"
 
 #: raidify-contact-form-processmail.php:176
 msgid "Mail sent successfully"
-msgstr "Mail envoyé avec succès"
+msgstr "郵件發送成功"
 
 #: raidify-contact-form-processmail.php:178
 msgid "Mail not sent"
-msgstr "Mail non envoyé"
+msgstr "郵件沒有發送"
 
 #: raidify-contact-form-settings.php:78 raidify-contact-form-settings.php:93
 #: raidify-contact-form-settings.php:106 raidify-contact-form-settings.php:119
 msgid "You do not have sufficient permissions to access this page."
-msgstr "Vous n'avez pas la permission d'accéder à cette page."
+msgstr "您沒有足夠的權限來訪問此頁面。"
 
 #: raidify-contact-form.php:142 raidify-contact-form.php:148
 #: raidify-contact-form.php:154
 msgid "name"
-msgstr "nom"
+msgstr "名字"
 
 #: raidify-contact-form.php:143 raidify-contact-form.php:149
 #: raidify-contact-form.php:155
 msgid "subject"
-msgstr "Sujet"
+msgstr "學科"
 
 #: raidify-contact-form.php:144 raidify-contact-form.php:150
 #: raidify-contact-form.php:156
 msgid "email"
-msgstr "email"
+msgstr "電子郵件"
 
 #: raidify-contact-form.php:146 raidify-contact-form.php:151
 #: raidify-contact-form.php:157
 msgid "message"
-msgstr "message"
+msgstr "信息"
 
 #~ msgid ""
 #~ "Paste this Short code \"[rcf_contact_form]\" on the page or post you want "
 #~ "this form to appear"
-#~ msgstr ""
-#~ "Collez ce code court \"[rcf_contact_form]\" sur la page ou un message que "
-#~ "vous voulez cette forme de comparaître"
+#~ msgstr "在頁面上粘貼此簡“[rcf_contact_form]”或張貼你想這種形式出現"
 
 #~ msgid "Admin Email account"
-#~ msgstr "Compte E-mail de l'admin"
+#~ msgstr "管理員的電子郵件帳戶"
 
 #~ msgid "Custom Email account"
-#~ msgstr "Compte de messagerie personnalisée"
+#~ msgstr "自定義的電子郵件帳戶"
 
 #~ msgid ""
 #~ "Select the radio button and enter the email address that emails should be "
 #~ "sent to, if left blank the admin email will he used"
 #~ msgstr ""
-#~ "Sélectionnez la case d'option et entrez l'adresse e-mail que les e-mails "
-#~ "sont à adresser à, si laissé vide l'e-mail de l'admin se qu'il avait "
-#~ "l'habitude"
+#~ "選擇單選按鈕，然後輸入郵件要發送到的電子郵件地址，如果留空管理員的電子郵件"
+#~ "將他用"
 
 #~ msgid "Fields settings table"
-#~ msgstr "Tableau de paramètres de champs"
+#~ msgstr "字段設置表"
 
 #~ msgid "Fields"
-#~ msgstr "Les champs"
+#~ msgstr "領域"
 
 #~ msgid "Username:"
-#~ msgstr "Nom d'utilisateur:"
+#~ msgstr "用戶名："
 
 #~ msgid "Password:"
-#~ msgstr "mot de passe:"
+#~ msgstr "密碼："
 
 #~ msgid "Enter Your Name"
-#~ msgstr "Entrez Votre Nom"
+#~ msgstr "輸入你的名字"
 
 #~ msgid "Enter a Subject"
-#~ msgstr "Entrez le Sujet"
+#~ msgstr "輸入主題"
 
 #~ msgid "Enter an Email address"
-#~ msgstr "Saisissez une adresse e-mail"
+#~ msgstr "輸入電子郵件地址"
 
 #~ msgid "Enter a Message"
-#~ msgstr "Entrez le message"
+#~ msgstr "輸入信息"
 
 #~ msgid "rcf-name"
-#~ msgstr "rcf-nom"
+#~ msgstr "RCF-名"
 
 #~ msgid "rcf-subject"
-#~ msgstr "rcf-Sujet"
+#~ msgstr "RCF-主題"

@@ -4,14 +4,14 @@ Contributors: olaleye
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EUQS4R94GUKRG&lc=GB&item_name=Donation%20towards%20Raidify%20Plugin%20Development&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Author URL: http://raidify.com/
 Plugin URL: http://raidify.com/raidify-contact-form/
-Tags: raidify, contact,contact form, contact form plugin, contact me, contact us, contacts, contacts form plugin, raidify contact form, feedback, feedback form, form, request, request form, customizable contact form, contact form with smtp
+Tags: raidify, contact,contact form, contact form plugin, contact me, contact us, contacts, contacts form plugin, raidify contact form, feedback, feedback form, form, request, request form, customizable contact form, contact form with smtp, recaptcha, google, google recaptcha, site key, secret key, contact form with recaptcha, captcha
 Requires at least: 3.9
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Raidify contact form is a free customizable contact form with SMTP (Simple Mail Transfer Protocol) support
+Raidify contact form is a free customizable contact form with SMTP (Simple Mail Transfer Protocol) support and Google reCaptcha
 
 == Description ==
 
@@ -38,11 +38,15 @@ Requires at least WordPress 3.9
 * Choose either SMTP authentication or no authentication
 * Specify a SMTP Username
 * Specify a SMTP Password
+* Use Google reCaptcha
+* Specify your Google reCaptcha site key
+* Specify your Google recaptcha secret key
+* Specify if you want to use Google reCaptcha or not
 
 
 **Coming soon**
 
-* CAPTCHA support
+* Ability to view emails sent through the form.
 * Got more ideas? Tell me!)
 
 If you have suggestions for a new add-on, feel free to email me at o.osunsanya@raidify.com.
@@ -132,10 +136,26 @@ To use SMTP with Raidify Contact Form
 
 Send me a message please http://raidify.com/contact-me/
 
+= How can I use Google reCaptcha with the plugin? =
+
+1. Go to "https://developers.google.com/recaptcha/" to register your site and obtain a site key and secret key
+
+2. Go to Raidify Contact Form settings page
+
+3. Click on the reCaptcha tab
+
+4. And select the Use Google reCaptcha checkbox
+
+5. Input your site key and secret key
+
+6. Save changes
+
 == Screenshots ==
 
-1. Raidify contact form
-2. Raidify contact form admin page
+1. Raidify contact form fields settings page
+2. Raidify contact form email settings page
+3. Raidify contact form smtp settings page
+4. Raidify contact form recaptcha settings page
 
 == Changelog ==
 
@@ -155,3 +175,9 @@ Send me a message please http://raidify.com/contact-me/
 = 1.1.4 =
 * Fixed translation problem of the message field.
 * Spanish translation was added. Thanks to [Jorge Azambuya](http://jorgeazambuya.com.ar/).
+
+= 2.0.0 =
+* Admin area was modified
+* Some minor bugs were fixed
+* New tabs were added to the admin area (Fields, Emails, SMTP, and reCaptcha tabs were added).
+* Tested with Wordpress 4.3 

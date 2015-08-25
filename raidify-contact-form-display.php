@@ -31,7 +31,9 @@ if (!class_exists('RaidifyContactFormDisplay')) {
             'week'
         );
         var $placeholder = array();
-
+        var $useGrC;
+        var $rcf_google_sitekey;
+        var $rcf_google_secretkey;
         /**
          * Construct the contact form display object
          * It also sets the SMTP options and adds the SMPT action
@@ -46,7 +48,10 @@ if (!class_exists('RaidifyContactFormDisplay')) {
             $this->placeholder = $options['placeholder'];
 
             $smtp_option = $options['smtp-option'];
-
+            $this->useGrC = $options['google-recaptcha']['rcf_use_google_recaptcha'];
+            $this->rcf_google_sitekey = $options['google-recaptcha']['rcf_gr_sitekey'];
+            $this->rcf_google_secretkey = $options['google-recaptcha']['rcf_gr_secretkey'];
+            
             define('RCF_MAILER', $options['mailer']);
             if (RCF_MAILER == 'smtp') {
                 define('RCF_SMTP_PORT_NUMBER', $smtp_option['port-number']);
@@ -94,29 +99,35 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          */
 
         public function rcf_display_form() {
-            echo '<div id="rcf-contact-form-display">';
-            $request_uri = filter_input(
-                    INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING
-            );
+            $request_uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
+            ?>
+                <div id="rcf-contact-form-display">                    
+                   <form id="feedback" method="post" action="<?php echo esc_url($request_uri) . '#rcf-contact-form-display'?>">
+            <?php
 
-            echo '<form id="feedback" method="post" action="'
-            . esc_url($request_uri)
-            . '#rcf-contact-form-display'
-            . '">'
-            ;
-
+            ?>
+            <?php
             $this->rcf_generate_form_input_elements();
             $this->rcf_generate_form_text_area_elements(60, 8);
             $this->set_send("rcf_submit");
+            
+            if ($this->useGrC == 'on') {  ?>
+                <div class="rcf-google-recaptcha">
+                    <div class="g-recaptcha" data-sitekey="<?php echo $this->rcf_google_sitekey ?>"></div>
+                </div>  <?php
+                }
+            
             echo '<p><input type="submit" id="rcf-submit" name="'
             . $this->get_send()
             . '" class="rcf-form" value='
             . __('send', 'raidify-contact-form')
             . '></p>'
             ;
+            ?>
 
-            echo '</form>';
-            echo '</div>';
+            </form>
+            </div>
+            <?php
         }
 
         /* --------------------------------------------------------------
@@ -202,6 +213,7 @@ if (!class_exists('RaidifyContactFormDisplay')) {
          * Checks if the submit button is clicked
          * checks the post array 
          * validates the email
+         * sends the mail
          * and check if the mail has been sent 
          */
         public function rcf_check_if_submitted() {
@@ -212,6 +224,32 @@ if (!class_exists('RaidifyContactFormDisplay')) {
                 ProcessMail::rcf_send_mail();
                 ProcessMail::rcf_check_mail_sent();
             }
+        }
+        
+        public function rcf_check_if_submitted_google_recaptcha(){
+            include 'recaptchalib.php';
+            $response = null;
+            $submitted = filter_input(INPUT_POST, 'rcf_submit');
+            if (isset($submitted)) {
+                ProcessMail::rcf_check_post_variables();
+                ProcessMail::rcf_validate_email();
+                // check secret key
+                $rcf_reCaptcha = new ReCaptcha($this->rcf_google_secretkey);
+                
+                if ($_POST["g-recaptcha-response"]) {
+                    $response = $rcf_reCaptcha->verifyResponse(
+                            $_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]
+                    );
+                }                
+                if ($response != null && $response->success) {
+                    //echo '<h2>You are spammer ! Get the @$%K out</h2>';
+                    ProcessMail::rcf_send_mail();
+                    ProcessMail::rcf_check_mail_sent();
+                } else{
+                    return;
+                }
+            }
+            
         }
 
         /**

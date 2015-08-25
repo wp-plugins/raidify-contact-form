@@ -2,10 +2,6 @@
     margin-top: 30px;
 }
 
-#rcf-fields-settings-content{
-
-}
-
 .rcf_fields_settings{
     border-collapse: collapse;
     width: 50%;
@@ -30,10 +26,6 @@
     text-align: left;
 }
 
-#rcf_send_to_content{
-    
-}
-
 .rcf_send_to_table{
     margin-top: 30px;
     width: 60%;
@@ -54,6 +46,7 @@
 
 .rcf_textbox{
     height: 30px;
+    border: 1px solid #BDBDBD !important;
     width: 100%;
 }
 
@@ -61,15 +54,24 @@
     margin-top: 30px;
     width: 50%;
     margin-bottom: 30px;
+    margin-left: 10px;
+    padding: 15px;
+    background-color: #fff;
 }
 
 #rcf-required-label-content span{
     padding-right: 15px;
 }
 
+.rcf-required-label-instruction p{
+    font-size: 1.1em;
+    color: #000;
+}
+
 #rcf-required-label{
-    width: 78%;
+    width: 100%;
     height: 30px;
+    border: 1px solid #BDBDBD !important;
 }
 
 #rcf-smtp-option{
@@ -85,7 +87,9 @@
 
 #rcf-host-server, #rcf-smtp-port,
 #rcf-smtp-from, #rcf-smtp-username,
-#rcf-smtp-password, #rcf-smtp-from-name{
+#rcf-smtp-password, #rcf-smtp-from-name, 
+.rcf_inputfield
+{
     width: 100%;
     height: 30px;
 }
@@ -98,14 +102,114 @@
     margin-top: 30px;
 }
 
-#smtp-instructions{
-
-}
-
 .rcf-warning{
     color: #f00;
 }
 
 .rcf-warning-content{
     font-weight: bold;
+}
+
+.rcf-plugin-title{
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.rcf-admin-fields-settings,
+#rcf_send_to_content,
+.rcf_php_mail_content,
+.rcf_form_content
+{
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+.rcf-admin-fields-settings-header, 
+.rcf-php-mail-settings-header, 
+.rcf-smtp-mail-settings-header, .rcf_send_to_instruction{
+    border: 1px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #E9E9E9;
+}
+
+.rcf-admin-fields-settings-content{
+    border: 1px solid #ccc;
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    margin-bottom: 10px;
+}
+
+.rcf-admin-field-title{
+    display: inline-block;
+    width: 5rem;
+}
+
+.rcf-save-button-wrapper{
+    width: 40%;
+    float: right;
+    margin-top:10px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.rcf-save-button-content{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.rcf_save_button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #D54E21;
+    color: #fff;
+}
+
+.rcf_save_button:hover{
+    background-color: #D04020;
+    cursor: pointer;
+}
+
+.rcf-fields-settings-title{
+    font-size: 1.5em;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.rcf-instruction-wrapper{
+    background-color: #fff;
+    height: 20px;
+    padding: 15px;
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+
+#rcf-smtp-setting-content{
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+.rcf-smtp-mail-settings-content, 
+.rcf-php-mail-settings-content, 
+.rcf-email-fields-settings-content,
+.rcf_form_wrapper{
+    border: 1px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    margin-bottom: 10px;    
+}
+
+.encryption-settings{
+    margin-right: 10%;
 }

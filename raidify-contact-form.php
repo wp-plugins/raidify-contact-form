@@ -5,7 +5,7 @@
  * Plugin URI: http://raidify.com/raidify-contact-form/
  * Description: Raidify contact form is a free customizable contact form with SMTP (Simple Mail Transfer Protocol) support.
  * Author: Olaleye Osunsanya
- * Version: 1.1.4
+ * Version: 2.0.0
  * Author URI: http://raidify.com/
  * Text Domain: raidify-contact-form
  * Domain Path: /languages/
@@ -18,12 +18,16 @@ if(!class_exists('Raidify_Contact_Form')){
     
     class Raidify_Contact_Form{
         
+        var $useGrC;
+        
         /**
          * Construct the plugin object
          */
         public function __construct() {
             $plugin_basename = plugin_basename(__FILE__);
-
+            $options = get_option('rcf_admin_settings');
+            $this->useGrC = $options['google-recaptcha']['rcf_use_google_recaptcha'];
+            
             if (!defined('MYPLUGIN_VERSION_KEY')) {
                 define('MYPLUGIN_VERSION_KEY', 'myplugin_version');
             }
@@ -107,7 +111,11 @@ if(!class_exists('Raidify_Contact_Form')){
             ob_start();
             include_once 'raidify-contact-form-display.php';
             $rcfDisplay = new RaidifyContactFormDisplay();
-            $rcfDisplay->rcf_check_if_submitted();
+            if($this->useGrC == 'on'){
+               $rcfDisplay->rcf_check_if_submitted_google_recaptcha();
+            }  else {
+                $rcfDisplay->rcf_check_if_submitted();
+            }          
             $rcfDisplay->rcf_display_form();
             return ob_get_clean();
         }
@@ -162,6 +170,11 @@ if(!class_exists('Raidify_Contact_Form')){
                 'from-name' => '',
                 'username' => '',
                 'password' => ''
+            ),
+            'google-recaptcha' => array(
+                'rcf_use_google_recaptcha' => '',
+                'rcf_gr_sitekey' => '',
+                'rcf_gr_secretkey' => ''
             )
         );
 
