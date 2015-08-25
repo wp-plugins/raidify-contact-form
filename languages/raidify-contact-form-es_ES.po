@@ -1,0 +1,266 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Raidify-contact-form\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-25 14:13+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pat <no@no.com>\n"
+"Language-Team: Olaleye Osunsanya <leye_2004@yahoo.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_c;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/email.php:105
+msgid "Use this email address to receive mails"
+msgstr "Utilice esta dirección para recibir los mails"
+
+#: admin/email.php:125
+msgid "Admin Email Account"
+msgstr "Cuenta de correo de Administrador"
+
+#: admin/email.php:135
+msgid "Custom Email Account"
+msgstr "Cuenta de correo de personalizada"
+
+#: admin/email.php:142
+msgid ""
+"Select the radio button and enter the email address that emails should be "
+"sent to, if left blank the admin email will be used"
+msgstr ""
+"Habilite esta casilla para enviar el contenido a una dirección de email "
+"diferente a la indicada en el apartado Administrador. Dejándola en blanco se "
+"utilizará por defecto el email de Administrador."
+
+#: admin/email.php:160 admin/field.php:204 admin/reCaptcha.php:99
+#: admin/smtp.php:67
+msgid ""
+"Paste this Short code [rcf_contact_form] on the page or post you want this "
+"form to appear"
+msgstr ""
+"Pegue este Shortcode \"[rcf_contact_form]\" en la página o post donde quiere "
+"que aparezca el formulario de contacto."
+
+#: admin/email.php:165 admin/field.php:209 admin/reCaptcha.php:104
+#: admin/smtp.php:73
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: admin/field.php:121 admin/field.php:161
+msgid "Required"
+msgstr "Requerido"
+
+#: admin/field.php:126 admin/field.php:166
+msgid "Placeholder"
+msgstr "Contenedor"
+
+#: admin/field.php:184
+msgid "Fields settings"
+msgstr "Configuración de campos"
+
+#: admin/field.php:230
+msgid ""
+"Use \"Required Label\" to set the text that appears on the required fields "
+"on the contact form"
+msgstr ""
+"Si marcó la opción \"Requerido\" puede personalizar el texto que será "
+"mostrado en el siguiente campo."
+
+#: admin/field.php:234
+msgid "Required Label"
+msgstr "Etiqueta \"Requerido\" personalizada"
+
+#: admin/reCaptcha.php:70
+msgid "Use Google Recaptcha"
+msgstr "Utilice Google Reconocer texto"
+
+#: admin/reCaptcha.php:73
+msgid "Site Key"
+msgstr "clave sitio"
+
+#: admin/reCaptcha.php:78
+msgid "Secret Key"
+msgstr "llave secreta"
+
+#: admin/smtp.php:159
+msgid "Use SMTP"
+msgstr "Usar SMTP"
+
+#: admin/smtp.php:165
+msgid "Use Php mail"
+msgstr "Usar Php mail"
+
+#: admin/smtp.php:183 admin/smtp.php:284
+msgid "SMTP Host Server"
+msgstr "Host del Servidor SMTP"
+
+#: admin/smtp.php:188 admin/smtp.php:286
+msgid "SMTP Port Number"
+msgstr "Puerto del servidor SMTP"
+
+#: admin/smtp.php:193
+msgid "Use Encryption"
+msgstr "Usar encriptación"
+
+#: admin/smtp.php:195
+msgid "No Encryption"
+msgstr "No encriptar"
+
+#: admin/smtp.php:196
+msgid "Use SSL"
+msgstr "Usar SSL"
+
+#: admin/smtp.php:197
+msgid "Use TLS"
+msgstr "Usar TLS"
+
+#: admin/smtp.php:205
+msgid "Use SMTP Authentication"
+msgstr "Usar autenticación SMTP"
+
+#: admin/smtp.php:210 admin/smtp.php:288
+msgid "From"
+msgstr "De"
+
+#: admin/smtp.php:215
+msgid "From Name (Optional)"
+msgstr "De (opcional)"
+
+#: admin/smtp.php:220 admin/smtp.php:290
+msgid "Username"
+msgstr "Nombre de Usuario"
+
+#: admin/smtp.php:225 admin/smtp.php:292
+msgid "Password"
+msgstr "Contraseña"
+
+#: admin/smtp.php:245
+msgid " To use SMTP, fill the fields marked with \"*\" "
+msgstr "Para utilizar SMTP, debe completar todos los campos marcados con \"*\""
+
+#: admin/smtp.php:246
+msgid " For the encryption system, \"TLS\" is not the same as \"STARTTLS\" "
+msgstr ""
+"Para los sistemas de encriptación, \"TLS\" no es lo mismo que \"STARTTLS\" "
+
+#: admin/smtp.php:247
+msgid ""
+" If \"Use SMTP Authentication\" is unchecked, \"Username\" and \"Password\" "
+"will not be used "
+msgstr ""
+"Si la opción \"Usar SMTP\" no esta tildada, el Nombre de usuario y "
+"Contraseña no serán enviados."
+
+#: admin/smtp.php:248
+msgid ""
+" If \"From Name\" is left blank, the name the user puts on the contact form "
+"name field will be used"
+msgstr ""
+"Si el campo \"De\" esta vacío, el nombre indicado por el usuario del "
+"formulario de contacto será el que aparezca en el mail."
+
+#: admin/smtp.php:280
+msgid "To use SMTP fill the following SMTP options"
+msgstr "Para usar SMTP debe completar las siguientes opciones SMTP"
+
+#: raidify-contact-form-display.php:123
+msgid "send"
+msgstr "Enviar"
+
+#: raidify-contact-form-processmail.php:79
+msgid "Please enter your"
+msgstr "Por favor indique su"
+
+#: raidify-contact-form-processmail.php:82
+msgid "Invalid email address"
+msgstr "Dirección de mail no válida."
+
+#: raidify-contact-form-processmail.php:176
+msgid "Mail sent successfully"
+msgstr "Su consulta ha sido enviada con éxito."
+
+#: raidify-contact-form-processmail.php:178
+msgid "Mail not sent"
+msgstr "Consulta no enviada."
+
+#: raidify-contact-form-settings.php:78 raidify-contact-form-settings.php:93
+#: raidify-contact-form-settings.php:106 raidify-contact-form-settings.php:119
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Ud. no tiene suficientes permisos para acceder a esta página."
+
+#: raidify-contact-form.php:142 raidify-contact-form.php:148
+#: raidify-contact-form.php:154
+msgid "name"
+msgstr "Nombre"
+
+#: raidify-contact-form.php:143 raidify-contact-form.php:149
+#: raidify-contact-form.php:155
+msgid "subject"
+msgstr "Tema"
+
+#: raidify-contact-form.php:144 raidify-contact-form.php:150
+#: raidify-contact-form.php:156
+msgid "email"
+msgstr "Email"
+
+#: raidify-contact-form.php:146 raidify-contact-form.php:151
+#: raidify-contact-form.php:157
+msgid "message"
+msgstr "Mensaje"
+
+#~ msgid ""
+#~ "Paste this Short code \"[rcf_contact_form]\" on the page or post you want "
+#~ "this form to appear"
+#~ msgstr ""
+#~ "Pegue este Shortcode \"[rcf_contact_form]\" en la página o post donde "
+#~ "quiere que aparezca el formulario de contacto."
+
+#~ msgid "Admin Email account"
+#~ msgstr "Cuenta de correo de Administrador"
+
+#~ msgid "Custom Email account"
+#~ msgstr "Cuenta de correo de personalizada"
+
+#~ msgid ""
+#~ "Select the radio button and enter the email address that emails should be "
+#~ "sent to, if left blank the admin email will he used"
+#~ msgstr ""
+#~ "Habilite esta casilla para enviar el contenido a una dirección de email "
+#~ "diferente a la indicada en el apartado Administrador. Dejándola en blanco "
+#~ "se utilizará por defecto el email de Administrador."
+
+#~ msgid "Fields settings table"
+#~ msgstr "Configuración de campos"
+
+#~ msgid "Fields"
+#~ msgstr "Campos"
+
+#~ msgid "Username:"
+#~ msgstr "Nom d'utilisateur:"
+
+#~ msgid "Password:"
+#~ msgstr "mot de passe:"
+
+#~ msgid "Enter Your Name"
+#~ msgstr "Entrez Votre Nom"
+
+#~ msgid "Enter a Subject"
+#~ msgstr "Entrez le Sujet"
+
+#~ msgid "Enter an Email address"
+#~ msgstr "Saisissez une adresse e-mail"
+
+#~ msgid "Enter a Message"
+#~ msgstr "Entrez le message"
+
+#~ msgid "rcf-name"
+#~ msgstr "rcf-nom"
+
+#~ msgid "rcf-subject"
+#~ msgstr "rcf-Sujet"
